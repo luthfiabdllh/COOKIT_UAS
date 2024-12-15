@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna saat tombol ditekan -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp" /> <!-- Sesuaikan radius dengan setengah dari tinggi tombol -->
+            <solid android:color="@color/md_amber_900" /> <!-- Warna saat tombol ditekan -->
+        </shape>
+    </item>
+
+    <!-- Warna default (normal) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp" /> <!-- Sesuaikan radius dengan setengah dari tinggi tombol -->
+            <solid android:color="@color/md_amber_600" /> <!-- Warna default -->
+        </shape>
+    </item>
+</selector>

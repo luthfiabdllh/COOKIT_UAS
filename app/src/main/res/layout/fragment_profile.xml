@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/profile_banner"
+        android:layout_width="match_parent"
+        android:layout_height="365dp"
+        android:src="@drawable/banner_profile"
+    />
+
+    <RelativeLayout
+        android:id="@+id/profile_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_banner"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:id="@+id/profile_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/md_amber_900"
+            android:textSize="16dp"
+            android:layout_marginBottom="7dp"
+            />
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_name_label"
+            android:text="Profile Name"
+            android:textSize="14sp"
+            android:background="@drawable/profile_view"
+            android:fontFamily="@font/montserrat"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile_email_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_name_layout"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:id="@+id/profile_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/md_amber_900"
+            android:textSize="16dp"
+            android:layout_marginBottom="7dp"
+            />
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_email_label"
+            android:text="Profile Email"
+            android:textSize="14sp"
+            android:background="@drawable/profile_view"
+            android:fontFamily="@font/montserrat"
+            />
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_logout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentBottom="true"
+        app:cornerRadius="32dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="@drawable/auth_btn_logout"
+        android:text="Log Out"
+        android:fontFamily="@font/poppins_bold">
+    </com.google.android.material.button.MaterialButton>
+</RelativeLayout>

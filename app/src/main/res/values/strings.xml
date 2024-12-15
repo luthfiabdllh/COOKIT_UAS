@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">COOKIT</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_favorite">Favorite</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+    <string name="start_text_advice">By continuing on this application you agree to our Terms of Use and Privacy Policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="welcome_page1_title">Maintain your calories \n and stay healthy!</string>
+    <string name="welcome_page2_title">Maintain your calories and stay healthy!</string>
+    <string name="welcome_page1_content">Join us in tracking your calorie intake \n effortlessly with our user-friendly calorie \n counting app. Start today and take control \n of your fitness journey</string>
+
+    <string name="title_onboarding_1"> Discover New Cooking Inspirations! </string>
+    <string name="description_onboarding_1">Explore thousands of delicious recipes for every occasion. From main dishes to snacks, everything is at your fingertips.</string>
+    <string name="title_onboarding_2"> Recipes Tailored to You! </string>
+    <string name="description_onboarding_2">Filter recipes by ingredients, cooking time, or your favorite categories. Find the perfect meal to suit your needs.</string>
+    <string name="title_onboarding_3"> Cook and Share the Fun! </string>
+    <string name="description_onboarding_3">Save your favorite recipes and share them with friends. Make cooking moments more enjoyable and meaningful.</string>
+
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="isi_data">Isi data di bawah ini dengan benar!</string>
+
+</resources>
