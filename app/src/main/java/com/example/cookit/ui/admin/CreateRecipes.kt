@@ -1,6 +1,5 @@
-package com.example.cookit
+package com.example.cookit.ui.admin
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast

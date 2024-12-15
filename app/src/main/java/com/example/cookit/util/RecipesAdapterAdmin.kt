@@ -41,6 +41,7 @@ class RecipesAdapterAdmin(
                 itemView.setOnClickListener {
                     onClickBook(data)
                 }
+
                 ivDelete.setOnClickListener {
                     AlertDialog.Builder(itemView.context).apply {
                         setTitle("Delete Confirmation")
@@ -54,7 +55,7 @@ class RecipesAdapterAdmin(
                                         if (response.isSuccessful) {
                                             Toast.makeText(
                                                 itemView.context,
-                                                "data buku ${data.title} berhasil di hapus",
+                                                "data  ${data.title} berhasil di hapus",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                             val position = adapterPosition

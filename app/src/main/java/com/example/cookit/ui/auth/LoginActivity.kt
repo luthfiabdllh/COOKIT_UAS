@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.cookit.AdminHomePage
+import com.example.cookit.ui.admin.AdminHomePage
 import com.example.cookit.data.model.User
 import com.example.cookit.data.network.ApiClient
 import com.example.cookit.databinding.ActivityLoginBinding
@@ -44,7 +44,12 @@ class LoginActivity : AppCompatActivity() {
                                     prefManager.saveEmail(i.email)
                                     prefManager.saveUsername(i.name)
                                     prefManager.savePassword(i.password)
-                                    prefManager.saveRole(i.role)
+                                    i.role?.let { role ->
+                                        prefManager.saveRole(role)
+                                    } ?: run {
+                                        showToast("User role is missing")
+                                        return
+                                    }
                                     checkLoginStatus()
                                     finish()
                                 }

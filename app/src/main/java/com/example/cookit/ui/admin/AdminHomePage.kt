@@ -1,4 +1,4 @@
-package com.example.cookit
+package com.example.cookit.ui.admin
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cookit.R
 import com.example.cookit.data.database.RecipeDAO
 import com.example.cookit.data.database.RecipeRoomDatabase
 import com.example.cookit.data.model.Recipes
@@ -17,6 +18,7 @@ import com.example.cookit.data.network.ApiClient
 import com.example.cookit.data.network.ApiService
 import com.example.cookit.databinding.ActivityAdminHomePageBinding
 import com.example.cookit.ui.detail.DetailActivity
+import com.example.cookit.util.PrefManager
 import com.example.cookit.util.RecipesAdapterAdmin
 import com.example.cookit.util.UserOnClick
 import retrofit2.Call
@@ -42,6 +44,12 @@ class AdminHomePage : AppCompatActivity(), UserOnClick {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val prefManager = PrefManager.getInstance(this)
+
+        binding.logoutBtn.setOnClickListener {
+            prefManager.clear()
         }
 
         setupRecyclerView()
