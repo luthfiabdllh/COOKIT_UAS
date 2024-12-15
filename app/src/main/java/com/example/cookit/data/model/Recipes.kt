@@ -4,11 +4,12 @@ import com.google.gson.annotations.SerializedName
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+
 @Entity(tableName = "recipes_table")
 data class Recipes(
     @PrimaryKey
     @SerializedName("_id")
-    val id: String,
+    val id: String ,
     @SerializedName("title")
     val title: String,
     @SerializedName("author")

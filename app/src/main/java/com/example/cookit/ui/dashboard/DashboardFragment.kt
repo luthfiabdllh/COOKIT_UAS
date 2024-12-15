@@ -52,6 +52,7 @@ class DashboardFragment : Fragment(), UserOnClick {
         recipeDao = db!!.RecipeDAO()!!
 
         recipesAdapter = RecipesAdapter(recipesList, ArrayList(), this) { recipes ->
+            Toast.makeText(requireContext(), "pencett", Toast.LENGTH_SHORT).show()
             val intentToDetail = Intent(requireContext(), DetailActivity::class.java)
             intentToDetail.putExtra("id", recipes.id)
             intentToDetail.putExtra("title", recipes.title)
@@ -114,5 +115,8 @@ class DashboardFragment : Fragment(), UserOnClick {
     override fun bookmark(recipes: Recipes) {
         executorService.execute { recipeDao.insert(recipes) }
         Toast.makeText(requireContext(), "Bookmarked", Toast.LENGTH_SHORT).show()
+        val intent = Intent("com.example.cookit.BOOKMARK_ACTION")
+        intent.putExtra("recipe_title", "Test Recipe")
+        context?.sendBroadcast(intent)
     }
 }

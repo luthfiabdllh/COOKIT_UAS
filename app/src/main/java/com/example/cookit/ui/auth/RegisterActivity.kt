@@ -27,7 +27,8 @@ class RegisterActivity : AppCompatActivity() {
                 val name = signupEtName.text.toString().trim()
                 val email = signupEtEmail.text.toString().trim()
                 val password = signupEtPassword.text.toString().trim()
-                val user = User(name, email, password)
+                val role = "user"
+                val user = User(name, email, password, role)
 
                 if(email.isEmpty() || password.isEmpty() || name.isEmpty() ) {
                     showToast("Please fill in all fields.")

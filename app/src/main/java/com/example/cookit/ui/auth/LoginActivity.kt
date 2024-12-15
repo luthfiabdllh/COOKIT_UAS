@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.cookit.AdminHomePage
 import com.example.cookit.data.model.User
 import com.example.cookit.data.network.ApiClient
 import com.example.cookit.databinding.ActivityLoginBinding
@@ -43,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
                                     prefManager.saveEmail(i.email)
                                     prefManager.saveUsername(i.name)
                                     prefManager.savePassword(i.password)
+                                    prefManager.saveRole(i.role)
                                     checkLoginStatus()
                                     finish()
                                 }
@@ -67,10 +69,15 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun checkLoginStatus() {
-        if (prefManager.isLoggedIn()) {
-            startActivity(Intent(this, SayHiActivity::class.java))
-            finish()
+    fun checkLoginStatus(){
+        if(prefManager.isLoggedIn()){
+            if(prefManager.getRole() == "admin"){
+                val intentToHome = Intent(this@LoginActivity, AdminHomePage::class.java)
+                startActivity(intentToHome)
+            }else if(prefManager.getRole() == "user"){
+                val intentToHome = Intent(this@LoginActivity, SayHiActivity::class.java)
+                startActivity(intentToHome)
+            }
         }
     }
 }

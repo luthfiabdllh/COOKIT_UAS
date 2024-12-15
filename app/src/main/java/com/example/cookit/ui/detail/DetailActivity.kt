@@ -41,8 +41,6 @@ class DetailActivity : AppCompatActivity() {
                 ?.joinToString(separator = "\n")
 
             btBack.setOnClickListener {
-                val intent = Intent(this@DetailActivity, MainActivity::class.java)
-                startActivity(intent)
                 finish()
             }
         }
